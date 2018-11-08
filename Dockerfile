@@ -1,8 +1,8 @@
-FROM sonatype/nexus3:3.12.0
+FROM sonatype/nexus3:3.14.0
 
 USER root
 
-ENV TZ=Australia/Melbourne
+#ENV TZ=Australia/Melbourne
 
 COPY entrypoint.sh /
 
