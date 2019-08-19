@@ -1,4 +1,4 @@
-FROM sonatype/nexus3:3.16.1
+FROM sonatype/nexus3:3.18.1
 
 USER root
 
@@ -17,4 +17,4 @@ RUN yum update -y && yum upgrade -y && yum install -y epel-release && yum instal
     yum remove -y dpkg epel-release && yum clean all && rm -rf /var/cache/yum
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["gosu", "nexus", "bash", "-c", "${SONATYPE_DIR}/start-nexus-repository-manager.sh"]
+CMD ["gosu", "nexus", "${SONATYPE_DIR}/start-nexus-repository-manager.sh"]
