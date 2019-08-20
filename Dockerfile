@@ -16,4 +16,4 @@ RUN yum update -y && yum upgrade -y && yum install -y tzdata && \
     yum clean all && rm -rf /var/cache/yum
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["gosu", "nexus", "${SONATYPE_DIR}/start-nexus-repository-manager.sh"]
+CMD ["gosu", "nexus", "/opt/sonatype/start-nexus-repository-manager.sh"]
