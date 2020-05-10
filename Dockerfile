@@ -8,7 +8,7 @@ COPY entrypoint.sh /
 
 RUN yum update -y && yum upgrade -y && yum install -y tzdata && \
     # install gosu
-    curl -fsSL "https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64" -o /usr/bin/gosu && \
+    curl -fsSL "https://github.com/tianon/gosu/releases/download/1.12/gosu-amd64" -o /usr/bin/gosu && \
     chmod +x /usr/bin/gosu && \
     gosu nobody true && \
     # complete gosu
