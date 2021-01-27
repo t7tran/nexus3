@@ -1,4 +1,4 @@
 # docker-nexus3
 Sonatype Nexus 3 docker image with some customisations
 
-    docker run -it --rm -e TZ=Asia/Ho_Chi_Minh coolersport/nexus3
+    docker run -it --rm -e TZ=Asia/Ho_Chi_Minh t7tran/nexus3
