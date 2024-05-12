@@ -1,10 +1,10 @@
-FROM sonatype/nexus3:3.58.1
+FROM sonatype/nexus3:3.68.0
 
 USER root
 
 RUN microdnf update -y && microdnf install --setopt=install_weak_deps=0 --setopt=tsflags=nodocs -y tzdata && \
     # install gosu
-    curl -fsSL "https://github.com/tianon/gosu/releases/download/1.16/gosu-amd64" -o /usr/bin/gosu && \
+    curl -fsSL "https://github.com/tianon/gosu/releases/download/1.17/gosu-amd64" -o /usr/bin/gosu && \
     chmod +x /usr/bin/gosu && \
     gosu nobody true && \
     # complete gosu
